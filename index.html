@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim Tsui</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/devicons.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/devicon.css">
+    <link rel="stylesheet" href="css/devicon-colors.css">
   </head>
   <body>
-
-
     <header>
       <div id="logo">TIMOTHY TSUI</div>
       <nav>
         <ul>
-          <li>PROJECTS</li>
-          <li>CONTACT</li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#about">CONTACT</a></li>
         </ul>
       </nav>
     </header>
@@ -27,38 +26,50 @@
       </section>
     <div class="wrapper">
 
-      <section>
+      <section id="projects">
           <article class="row project">
             <div class="col-6 imgContainer">
               <img src="images/slack-overflow.jpg" alt="">
             </div><!--
             --><div class="col-4 summary">
-              <h2>Project name</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga deserunt consequuntur nesciunt laborum ea quo at eveniet, quasi temporibus numquam dolorem laboriosam id minus dolorum nobis natus veritatis quam.</p>
-              <p>Technologies:</p>
-              <span class="techIcons">
-                <i class="devicons devicons-javascript_badge"></i>
-              </span>
-              <p>When: 1 Jan 2016 </p>
-              <a href="#">Github</a>
-              <a href="#">Demo</a>
+              <h2>Slack Overflow</h2>
+              <p>A forum for students and teachers at General Assembly where they can discuss course material, ask questions and post valuable resources.</p>
+              <div class="techIcons">
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-rails-plain-wordmark colored"></i>
+                <i class="devicon-bootstrap-plain-wordmark colored"></i>
+                <i class="devicon-postgresql-plain-wordmark colored"></i>
+                <i class="devicon-html5-plain-wordmark colored"></i>
+                <i class="devicon-css3-plain-wordmark colored"></i>
+              </div>
+              <p>When: 18 Dec 2015 </p>
+              <div>
+                <a href="https://github.com/timiscoding/slack_overflow">Github</a>
+                <a href="https://slack-overflow-app.herokuapp.com/">Demo</a>
+              </div>
             </div>
           </article>
 
            <article class="row project">
             <div class="col-6 imgContainer">
-              <img src="images/chore2.jpg" alt="">
+              <img id="choreImage" src="images/chore2.jpg" alt="">
             </div><!--
             --><div class="col-4 summary">
-              <h2>Project name</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga deserunt consequuntur nesciunt laborum ea quo at eveniet, quasi temporibus numquam dolorem laboriosam id minus dolorum nobis natus veritatis quam.</p>
-              <p>Technologies:</p>
+              <h2>Chore app</h2>
+              <p>A flatmates task manager web app with notifications, reviews and score tracking system.</p>
               <span class="techIcons">
-                <i class="devicons devicons-javascript_badge"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-rails-plain-wordmark colored"></i>
+                <i class="devicon-backbonejs-plain-wordmark colored"></i>
+                <i class="devicon-jquery-plain-wordmark colored"></i>
+                <i class="devicon-postgresql-plain-wordmark colored"></i>
+                <i class="devicon-html5-plain-wordmark colored"></i>
+                <i class="devicon-css3-plain-wordmark colored"></i>
+
               </span>
-              <p>When: 1 Jan 2016 </p>
-              <a href="#">Github</a>
-              <a href="#">Demo</a>
+              <p>When: 22 Jan 2016 </p>
+              <a href="https://github.com/timiscoding/project_2">Github</a>
+              <a href="https://calm-escarpment-12505.herokuapp.com/">Demo</a>
             </div>
           </article>
 
@@ -67,21 +78,25 @@
               <img src="images/code-paste.jpg" alt="">
             </div><!--
             --><div class="col-4 summary">
-              <h2>Project name</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fuga deserunt consequuntur nesciunt laborum ea quo at eveniet, quasi temporibus numquam dolorem laboriosam id minus dolorum nobis natus veritatis quam.</p>
-              <p>Technologies:</p>
+              <h2>Code Paste</h2>
+              <p>Code paste is a code snippet tool that lets you anonymously paste code so you can quickly share it.</p>
               <span class="techIcons">
-                <i class="devicons devicons-javascript_badge"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-rails-plain-wordmark colored"></i>
+                <i class="devicon-jquery-plain-wordmark colored"></i>
+                <i class="devicon-postgresql-plain-wordmark colored"></i>
+                <i class="devicon-html5-plain-wordmark colored"></i>
+                <i class="devicon-css3-plain-wordmark colored"></i>
               </span>
-              <p>When: 1 Jan 2016 </p>
-              <a href="#">Github</a>
-              <a href="#">Demo</a>
+              <p>When: 12 Feb 2016 </p>
+              <a href="https://github.com/timiscoding/code-paste">Github</a>
+              <a href="https://code-paste.herokuapp.com/">Demo</a>
             </div>
           </article>
       </section>
 
-      <section class="about">
-        <h1>Contact</h1>
+      <section id="about">
+        <h1>CONTACT</h1>
         <ul>
           <li>
             <a href="mailto:timiscoding@gmail.com"><i class="fa fa-envelope-o"></i>timiscoding@gmail.com</a>
@@ -90,10 +105,10 @@
             <i class="fa fa-phone-square"></i>0452 229 685</p>
           </li>
           <li>
-            <a href="#"><i class="fa fa-twitter-square"></i>twitter</a>
+            <a href="https://twitter.com/timiscoding"><i class="fa fa-twitter-square"></i>twitter</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-linkedin-square"></i>linkedin</a>
+            <a href="https://au.linkedin.com/in/timiscoding"><i class="fa fa-linkedin-square"></i>linkedin</a>
           </li>
 
         </ul>
