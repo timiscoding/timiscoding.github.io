@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+body {
+  margin: 0;
+  font-family: 'Droid Serif', serif;
+  background: #ecf0f1;
+}
+
+header {
+  background: #ecf0f1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+}
+
+#logo {
+  margin: auto 0;
+  padding: 0.5em;
+}
+
+nav ul {
+  padding: 0.5em;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: grey;
+}
+
+nav a:hover {
+  color: black;
+}
+
+.brief {
+  min-height: calc(100vh - 61px);
+  color: white;
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image:
+  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px),
+  linear-gradient(to bottom, black 60%, #ecf0f1);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw calc(100vh - 61px);
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0;
+}
+
+.brief p {
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 90vw;
+  border: 1px solid grey;
+  background: white;
+}
+
+.row {
+  height: 70vh;
+  margin: 1em;
+  border: 1px solid lightgrey;
+}
+
+.col-7 {
+  display: inline-block;
+  width: 70%;
+  background: green;
+}
+
+.col-3 {
+ display: inline-block;
+  width: 30%;
+  height: 100%;
+  background: green;
+}
+
+.col-5 {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  background: green;
+}
+
+.col-6 {
+ display: inline-block;
+  width: 60%;
+  height: 100%;
+}
+
+.col-4 {
+  display: inline-block;
+  width: 40%;
+  height: 100%;
+  background: #ecf0f1;
+}
+
+.project .imgContainer {
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#choreImage {
+  width: auto;
+  height: 100%;
+}
+
+.project .summary {
+  display: inline-block;
+  max-width: 50%;
+  vertical-align: top;
+  padding: 1em;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
+.project .links {
+  background: blue;
+  text-align: center;
+}
+
+.project a {
+  text-decoration: none;
+  background: yellow;
+  color: black;
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+.project .summary h2 {
+  margin-top: 0;
+}
+
+.techIcons i {
+  font-size: 3em;
+
+}
+
+.devicon-javascript-plain {
+  background: black;
+}
+
+section h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+}
+
+#about a {
+  text-decoration: none;
+  color: black;
+}
+
+#about ul {
+  text-align: center;
+  padding: 0;
+}
+
+#about li {
+  padding: 1em;
+  list-style-type: none;
+  display: inline;
+  font-size: 1.5em;
+}
+
+#about .fa {
+  font-size: 2em;
+  padding-right: 0.5em;
+}
