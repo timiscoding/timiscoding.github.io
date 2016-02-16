@@ -53,7 +53,6 @@ nav a:hover {
   radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
   radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px),
   linear-gradient(to bottom, black 60%, #ecf0f1);
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw calc(100vh - 61px);
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0;
 }
 
@@ -136,7 +135,8 @@ nav a:hover {
   }
   .brief {
     font-size: 3em;
-    min-height: calc(100vh - 61px);
+    min-height: calc(100vh - 40px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw calc(100vh - 40px);
   }
   .col {
     width: 50%;
@@ -174,7 +174,8 @@ nav a:hover {
   }
   .brief {
     font-size: 4em;
-    min-height: calc(100vh - 61px);
+    min-height: calc(100vh - 53px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw calc(100vh - 53px);
   }
   .project .img {
     height: 400px;
