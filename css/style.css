@@ -9,18 +9,15 @@ body {
 
 header {
   background: #ecf0f1;
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;*/
+  /*justify-content: space-between;*/
   font-size: 1.5em;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
 }
 
-#logo {
-  margin: auto 0;
-  padding: 0.5em;
-}
+
 
 nav ul {
   padding: 0.5em;
@@ -43,9 +40,9 @@ nav a:hover {
 }
 
 .brief {
-  min-height: calc(100vh - 61px);
+
   color: white;
-  font-size: 4em;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,66 +69,178 @@ nav a:hover {
 }
 
 .row {
-  height: 70vh;
+  /*max-height: 50vmin;*/
   margin: 1em;
   border: 1px solid lightgrey;
+  overflow: hidden;
+    background: #ecf0f1;
 }
 
-.col-7 {
+.col {
+  max-height: 100%;
   display: inline-block;
-  width: 70%;
-  background: green;
-}
-
-.col-3 {
- display: inline-block;
-  width: 30%;
-  height: 100%;
-  background: green;
-}
-
-.col-5 {
-  display: inline-block;
-  width: 50%;
-  height: 100%;
-  background: green;
+  box-sizing: border-box;
+  /*background: green;*/
 }
 
 .col-6 {
  display: inline-block;
   width: 60%;
-  height: 100%;
 }
 
 .col-4 {
   display: inline-block;
   width: 40%;
-  height: 100%;
-  background: #ecf0f1;
 }
 
-.project .imgContainer {
-  text-align: center;
+@media (max-width: 640px) {
+  body {
+    font-size: 11px;
+  }
+  .brief {
+    font-size: 2em;
+    min-height: calc(100vh - 113px);
+  }
+  #logo {
+    display: block;
+    margin: auto 0;
+    padding: 0.5em;
+  }
+  #logo {
+    display: block;
+    text-align: center;
+  }
+  nav li {
+    display: block;
+    text-align: center;
+  }
+  .col {
+    width: 100%;
+  }
+  .project .img {
+    height: 70vmin;
+    /*width: 100%;*/
+  }
+  .techIcons i {
+    font-size: 2.2em;
+  }
+  .project .summary {
+    text-align: center;
+  }
+
 }
 
-.project img {
-  width: 100%;
+@media (min-width: 641px) and (max-width: 1024px) {
+  article {
+    display: table;
+  }
+  .brief {
+    font-size: 3em;
+    min-height: calc(100vh - 61px);
+  }
+  .col {
+    width: 50%;
+  }
+  body {
+    font-size: 12px;
+  }
+  .project .img {
+    height: 300px;
+    display: table-cell;
+  }
+  .techIcons i {
+    font-size: 2.5em;
+  }
+  #logo {
+    display: inline-block;
+    margin: auto 0;
+    padding: 0.5em;
+  }
+  nav {
+    display: inline-block;
+    float: right;
+  }
+  #about ul {
+    text-align: center;
+  }
+  #about li {
+    display: inline;
+  }
+}
+
+@media (min-width: 1025px) {
+  article {
+    display: table;
+  }
+  .brief {
+    font-size: 4em;
+    min-height: calc(100vh - 61px);
+  }
+  .project .img {
+    height: 400px;
+    display: table-cell;
+  }
+  .techIcons i {
+    font-size: 3em;
+  }
+  #logo {
+    display: inline-block;
+    margin: auto 0;
+    padding: 0.5em;
+  }
+  nav {
+    display: inline-block;
+    float: right;
+  }
+  #about ul {
+    text-align: center;
+  }
+  #about li {
+      display: inline;
+  }
+}
+
+
+
+/*.project img {
+  max-height: 400px;
+  max-width: 100%;
   box-sizing: border-box;
   margin: 0;
+  text-align: center;
+}*/
+
+
+.project .imgWrapper {
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#choreImage {
+#slackImg {
+  background-image: url('../images/SlackOverflow.jpg');
+}
+
+#choresImg {
+  background-image: url('../images/ChoresApp.jpg');
+}
+
+#codePasteImg {
+  background-image: url('../images/CodePaste.jpg');
+}
+
+/*#choreImage {
   width: auto;
   height: 100%;
-}
+}*/
 
 .project .summary {
-  display: inline-block;
-  max-width: 50%;
-  vertical-align: top;
+  display: table-cell;
+  vertical-align: middle;
   padding: 1em;
   box-sizing: border-box;
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: 0.5px;
 }
 
@@ -152,16 +261,11 @@ nav a:hover {
   margin-top: 0;
 }
 
-.techIcons i {
-  font-size: 3em;
-
-}
-
 .devicon-javascript-plain {
   background: black;
 }
 
-section h1 {
+h1 {
   font-family: 'Lato', sans-serif;
   font-size: 2em;
   text-align: center;
@@ -171,20 +275,25 @@ h2 {
   font-family: 'Lato', sans-serif;
 }
 
+#about {
+  background: black;
+  color: lightgrey;
+  padding: 0.5em 0;
+}
+
 #about a {
   text-decoration: none;
-  color: black;
+  color: lightgrey;
 }
 
 #about ul {
-  text-align: center;
   padding: 0;
 }
 
 #about li {
   padding: 1em;
   list-style-type: none;
-  display: inline;
+
   font-size: 1.5em;
 }
 
