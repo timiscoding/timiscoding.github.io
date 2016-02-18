@@ -1,3 +1,22 @@
+<!-- briefly talk about myself. skills, center align contact, previous relevant experience.
+    use sans font instead.
+
+    add image slider for projects
+
+    4 sections: brief, about me, projects, contact
+
+    spacing between techstack, desc and buttons
+
+    fixed nav bar
+
+    in brief, add things i'm passionate about, or like working on such as javascript/ruby. think about how to say i don't like working with css. what i want to learn next or currently learning. node, react, d3, threejs
+
+    link to cv
+
+    good soft skills - time management
+
+  -->
+
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -5,30 +24,70 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim Tsui</title>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/devicon.css">
     <link rel="stylesheet" href="css/devicon-colors.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
   </head>
   <body>
-    <header>
-      <div id="logo">TIMOTHY TSUI</div>
-      <nav>
-        <ul>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="http://timiscoding.github.io/blog/" target="_blank">BLOG</a></li>
-          <li><a href="#about">CONTACT</a></li>
-
-        </ul>
-      </nav>
-    </header>
+  <div id="fullpage">
+    <div class="section">
+      <header>
+        <div id="logo"><a href="#1st">TIMOTHY TSUI</a></div>
+        <nav>
+          <ul>
+            <li><a href="#2nd">ABOUT</a></li>
+            <li><a href="#3rd">SKILLS</a></li>
+            <li><a href="#4th">PROJECTS</a></li>
+            <li><a href="#7th">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
 
       <section class="brief">
-        <p>Sydney based web developer</p>
+        <p>I'm a Sydney based junior web developer looking to work for an innovative company that lets me play with the latest technologies. Front or back end - like Rails or Javascript - with some CSS styling on the side. I love writing elegant solutions to solve tough problems.
+        </p>
       </section>
-      <div class="wrapper">
+    </div>
+    <div class="section about wrapper">
+            <div class="col col-3 time">
+              <h2>Past</h2>
+              <p>Previous work experience:
+                <ul>
+                  <li>computer technical support</li>
+                  <li>hardware engineer intern building a PC based simulator</li>
+                  <li>tester and document video compression software</li>
+                </ul>
+              <p>Curious about how the simulator worked, I obtained a Diploma in IT at university to gain fundamental computer science knowledge.</p>
+            </div>
 
-      <section id="projects">
+            <div class="col col-3 time">
+              <h2>Present</h2>
+              <p>The theory proved useful but it wasn't enough. I joined General Assembly's Web Development Immersive bootcamp to practice writing code and work on projects.</p>
+            </div>
+
+            <div class="col col-3 time">
+              <h2>Future</h2>
+              <p>Now my guided education is complete, I want to learn react, angular, node, three.js and d3. Being able to complete projects has instilled confidence and I'm ready to code professionally.</p>
+            </div>
+
+                    <h2>Trivia</h2>
+                    <p>When I'm not coding like a robot, you'll find me in front of a piano trying to express the smooth velvety tones of Schumann or relaxing with Einaudi.</p>
+    </div>
+    <div class="section wrapper skills">
+        Languages: Javascript, Ruby, HTML, CSS
+        Frameworks: Backbone.js , Ruby on Rails, Sinatra, Bootstrap, Skeleton CSS
+        Libraries: jQuery, Underscore.js
+        Testing: EDD/TDD/BDD using RSpec and minitest
+        Databases: SQLite, PostgreSQL
+        Other: Web API, AJAX, RESTful services, Git, Agile, MVC/MV* design patterns
+        <div class="chart"></div>
+    </div>
+    <div class="section wrapper projects">
           <article class="row project">
             <div id="slackImg" class="col col-6 imgWrapper img">
               <!-- <img src="images/slack.jpg" alt=""> -->
@@ -51,7 +110,8 @@
               </div>
             </div>
           </article>
-
+    </div>
+     <div class="section wrapper projects">
           <article class="row project">
             <div id="choresImg" class="col col-6 imgWrapper img">
               <!-- <img id="choreImage" src="images/chores.jpg" alt=""> -->
@@ -74,7 +134,9 @@
               <a href="https://calm-escarpment-12505.herokuapp.com/" target="_blank">Demo</a>
             </div>
           </article>
+      </div>
 
+      <div class="section wrapper projects">
            <article class="row project">
             <div id="codePasteImg" class="col col-6 imgWrapper img">
               <!-- <img src="images/code-paste.jpg" alt=""> -->
@@ -95,25 +157,31 @@
               <a href="https://code-paste.herokuapp.com/" target="_blank">Demo</a>
             </div>
           </article>
-      </section>
     </div>
+    <div id="about" class="section fp-auto-height">
+        <h1>CONTACT</h1>
+        <ul>
+          <li>
+            <a href="mailto:timiscoding@gmail.com"><i class="fa fa-envelope-o"></i>timiscoding@gmail.com</a>
+          </li>
+          <li>
+            <i class="fa fa-phone-square"></i>0452 229 685</p>
+          </li>
+          <li>
+            <a href="https://twitter.com/timiscoding"><i class="fa fa-twitter-square"></i>twitter</a>
+          </li>
+          <li>
+            <a href="https://au.linkedin.com/in/timiscoding"><i class="fa fa-linkedin-square"></i>linkedin</a>
+          </li>
+          <li>
+            <a href="https://github.com/timiscoding" target="_blank"><i class="fa fa-github-square"></i>
+        GitHub</a>
+          </li>
+          <li><i class="fa fa-pencil-square"></i>
+<a href="http://timiscoding.github.io/blog/" target="_blank">Blog</a></li>
+        </ul>
+    </div>
+  </div>
 
-    <footer id="about">
-      <h1>CONTACT</h1>
-      <ul>
-        <li>
-          <a href="mailto:timiscoding@gmail.com"><i class="fa fa-envelope-o"></i>timiscoding@gmail.com</a>
-        </li>
-        <li>
-          <i class="fa fa-phone-square"></i>0452 229 685</p>
-        </li>
-        <li>
-          <a href="https://twitter.com/timiscoding"><i class="fa fa-twitter-square"></i>twitter</a>
-        </li>
-        <li>
-          <a href="https://au.linkedin.com/in/timiscoding"><i class="fa fa-linkedin-square"></i>linkedin</a>
-        </li>
-      </ul>
-    </footer>
   </body>
 </html>
