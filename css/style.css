@@ -10,6 +10,15 @@
   color: white;
 }
 
+body a {
+  text-decoration: none;
+  color: grey;
+}
+
+body a:hover {
+  color: darkgrey;
+}
+
 body {
   margin: 0;
   /*font-family: 'Droid Serif', serif;*/
@@ -17,11 +26,12 @@ body {
   background: #ecf0f1;
 }
 
-header {
+nav {
+  border-bottom: 2px solid black;
   background: #ecf0f1;
   /*display: flex;*/
   /*justify-content: space-between;*/
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
   letter-spacing: 1px;
   position: fixed;
@@ -30,54 +40,71 @@ header {
   z-index: 1;
 }
 
+nav li.active a{
+  color: black;
+}
 
 nav ul {
   padding: 0.5em;
   margin: 0;
+  text-align: right;
 }
+
 
 nav li {
   display: inline;
   list-style-type: none;
-  padding: 0 1em;
 }
 
-header a {
+nav a {
   text-decoration: none;
   color: grey;
 }
 
-header a:hover {
+nav a:hover {
   color: black;
 }
 
 .brief {
-
+  min-height: 100vh;
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw 100vh;
   color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-image:
+  background-image: url('../images/desk.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+/*  background-image:
   radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
   radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
   radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
   radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px),
   linear-gradient(to bottom, black 60%, #ecf0f1);
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0;*/
 }
 
-.brief p {
+.brief img {
+  display: block;
+  margin: 0 auto 1em auto;
+  border: 1px solid black;
+  padding: 5px;
+  background: white;
+  border-radius: 5px;
+  height: 20vmin;
+}
+
+/*.brief p {
   margin: 0;
   display: inline-block;
   width: 75vw;
   text-align: center;
-}
+}*/
 
 .wrapper {
   margin: 0 auto;
-  max-width: 70vw;
   /*border: 1px solid grey;*/
   /*background: white;*/
   padding: 1em;
@@ -108,8 +135,37 @@ header a:hover {
   width: 40%;
 }
 
+.col-skill {
+  display: inline-block;
+  width: calc(95% / 3);
+  /*background: grey;*/
+  max-height: 300px;
+  padding: 0.5em;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.col-skill h3 {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.col-skill ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.col-skill li {
+  background: #73d216;
+  padding: 0.2em;
+  border: 1px solid black;
+}
+
 .about {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  /*background-image: linear-gradient(to bottom, #64b3f4, #71B280);*/
+  background: #eee8d5;
 }
 
 
@@ -122,6 +178,16 @@ header a:hover {
   text-align: center;
 }
 
+.skills {
+  background: #F1E6E0;
+  /*background-image: linear-gradient(to bottom, #71B280, #c2e59c);*/
+}
+
+.projects {
+  background: #34495e;
+  /*background-image: linear-gradient(to bottom, white, black);*/
+}
+
 .col-3 {
   display: inline-block;
   width: calc((100% - 2em) / 3);
@@ -132,25 +198,35 @@ header a:hover {
 }
 
 @media (max-width: 640px) {
-  body {
-    font-size: 11px;
-  }
   .brief {
-    /*font-size: 2em;*/
-    min-height: calc(100vh - 113px);
+    font-size: 1.2em;
   }
-  #logo {
+  body {
+    font-size: 12px;
+  }
+/*  #logo {
     display: block;
     margin: auto 0;
     padding: 0.5em;
-  }
-  #logo {
+  }*/
+  /*#logo {
     display: block;
     text-align: center;
-  }
+  }*/
   nav li {
-    display: block;
+    display: none;
     text-align: center;
+  }
+  nav li:first-child {
+    display:block;
+    color: grey;
+    cursor: pointer;
+  }
+  nav li:first-child:hover {
+    color: black;
+  }
+  .showMenuItem {
+    display: block;
   }
   .col {
     width: 100%;
@@ -159,23 +235,27 @@ header a:hover {
     height: 70vmin;
     /*width: 100%;*/
   }
-  .techIcons i {
+  i.iconTech {
     font-size: 2.2em;
   }
   .project .summary {
     text-align: center;
   }
+  .wrapper {
+    max-width: 95vw;
+  }
+  #about li, #about a {
+      display: block;
+  }
 
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
+  .brief {
+    font-size: 1.5em;
+  }
   article {
     display: table;
-  }
-  .brief {
-    /*font-size: 3em;*/
-    min-height: calc(100vh - 40px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw calc(100vh - 40px);
   }
   .col {
     width: 50%;
@@ -185,13 +265,13 @@ header a:hover {
     width: calc((100% - 2em) / 3);;
   }
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
   .project .img {
     height: 300px;
     display: table-cell;
   }
-  .techIcons i {
+  i.iconTech {
     font-size: 2.5em;
   }
   #logo {
@@ -201,30 +281,37 @@ header a:hover {
   }
   nav {
     display: inline-block;
-    float: right;
+    /*float: right;*/
+  }
+  nav li {
+    padding: 0 0.25em;
+  }
+  nav li:first-child {
+    float: left;
   }
   #about ul {
     text-align: center;
   }
   #about li {
-    display: inline;
+    display: inline-block;
+  }
+  .wrapper {
+    max-width: 80vw;
   }
 }
 
 @media (min-width: 1025px) {
+  .brief {
+    font-size: 1.5em;
+  }
   article {
     display: table;
-  }
-  .brief {
-    /*font-size: 4em;*/
-    min-height: calc(100vh - 53px);
-    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px, 100vw calc(100vh - 53px);
   }
   .project .img {
     height: 400px;
     display: table-cell;
   }
-  .techIcons i {
+  i.iconTech {
     font-size: 3em;
   }
   #logo {
@@ -236,11 +323,20 @@ header a:hover {
     display: inline-block;
     float: right;
   }
+  nav li {
+    padding: 0 1em;
+  }
+  nav li:first-child {
+    float: left;
+  }
   #about ul {
     text-align: center;
   }
   #about li {
-      display: inline;
+      display: inline-block;
+  }
+  .wrapper {
+    max-width: 70vw;
   }
 }
 
@@ -254,6 +350,9 @@ header a:hover {
   text-align: center;
 }*/
 
+i.iconTech {
+  line-height: 1.2em;
+}
 
 .project .imgWrapper {
   text-align: center;
@@ -295,10 +394,15 @@ header a:hover {
 
 .project a {
   text-decoration: none;
-  background: yellow;
+  background: #cddc39;
   color: black;
   padding: 0.5em;
   border: 1px solid black;
+  border-radius: 3px;
+}
+
+.project a:hover {
+  background: #8bc34a;
 }
 
 .project .summary h2 {
@@ -330,6 +434,14 @@ h2 {
   color: lightgrey;
 }
 
+#about a:hover {
+  color: white;
+}
+
+#about i {
+  vertical-align: middle;
+}
+
 #about ul {
   padding: 0;
 }
@@ -338,7 +450,7 @@ h2 {
   padding: 1em;
   list-style-type: none;
 
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 #about .fa {

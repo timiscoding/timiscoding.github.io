@@ -34,60 +34,113 @@
     <link rel="stylesheet" href="css/jquery.fullPage.css">
   </head>
   <body>
+    <!-- <div id="logo"><a href="#1st">TIMOTHY TSUI</a></div> -->
+    <nav>
+      <ul id="menu">
+        <li>TIMOTHY TSUI</li>
+        <li data-menuanchor="1st"><a href="#1st">BRIEF</a></li>
+        <li data-menuanchor="2nd"><a href="#2nd">ABOUT</a></li>
+        <li data-menuanchor="3rd"><a href="#3rd">SKILLS</a></li>
+        <li data-menuanchor="4th"><a href="#4th">PROJECTS</a></li>
+        <li data-menuanchor="7th"><a href="#7th">CONTACT</a></li>
+      </ul>
+    </nav>
   <div id="fullpage">
-    <div class="section">
-      <header>
-        <div id="logo"><a href="#1st">TIMOTHY TSUI</a></div>
-        <nav>
-          <ul>
-            <li><a href="#2nd">ABOUT</a></li>
-            <li><a href="#3rd">SKILLS</a></li>
-            <li><a href="#4th">PROJECTS</a></li>
-            <li><a href="#7th">CONTACT</a></li>
-          </ul>
-        </nav>
-      </header>
+    <div class="section brief">
+      <div class="wrapper">
+        <img src="images/headshot_color.jpg" alt="headshot">
 
-      <section class="brief">
-        <p>I'm a Sydney based junior web developer looking to work for an innovative company that lets me play with the latest technologies. Front or back end - like Rails or Javascript - with some CSS styling on the side. I love writing elegant solutions to solve tough problems.
-        </p>
-      </section>
+        I'm a Sydney based junior web developer looking to work for an innovative company that lets me play with the latest technologies. Front end or back end with some CSS styling on the side.
+      </div>
     </div>
-    <div class="section about wrapper">
-            <div class="col col-3 time">
-              <h2>Past</h2>
-              <p>Previous work experience:
-                <ul>
-                  <li>computer technical support</li>
-                  <li>hardware engineer intern building a PC based simulator</li>
-                  <li>tester and document video compression software</li>
-                </ul>
-              <p>Curious about how the simulator worked, I obtained a Diploma in IT at university to gain fundamental computer science knowledge.</p>
-            </div>
+    <div class="section about">
+      <div class="wrapper">
+        <div class="col col-3 time">
+           <h2>Past</h2>
+           <p>Previous work experience:
+             <ul>
+               <li>computer technical support</li>
+               <li>hardware engineer intern building a simulator</li>
+               <li>test and document video compression software</li>
+             </ul>
+           <p>Curious about the simulator's software, I went to university to learn programming theory.</p>
+         </div>
 
-            <div class="col col-3 time">
-              <h2>Present</h2>
-              <p>The theory proved useful but it wasn't enough. I joined General Assembly's Web Development Immersive bootcamp to practice writing code and work on projects.</p>
-            </div>
+         <div class="col col-3 time">
+           <h2>Present</h2>
+           <p>I joined General Assembly's Web Development Immersive bootcamp to practice writing code and work on projects.</p>
+         </div>
 
-            <div class="col col-3 time">
-              <h2>Future</h2>
-              <p>Now my guided education is complete, I want to learn react, angular, node, three.js and d3. Being able to complete projects has instilled confidence and I'm ready to code professionally.</p>
-            </div>
+         <div class="col col-3 time">
+           <h2>Future</h2>
+           <p>Being able to complete projects has instilled confidence in me. Now I want to learn react, angular, node, three.js and d3.</p>
+         </div>
 
-                    <h2>Trivia</h2>
-                    <p>When I'm not coding like a robot, you'll find me in front of a piano trying to express the smooth velvety tones of Schumann or relaxing with Einaudi.</p>
+         <h2>Trivia</h2>
+         <p>When I'm not coding like a robot, you'll find me in front of a <a href="https://soundcloud.com/timtee-1" target="_blank">piano relaxing</a> with Schumann or Einaudi.</p>
+       </div>
     </div>
-    <div class="section wrapper skills">
-        Languages: Javascript, Ruby, HTML, CSS
-        Frameworks: Backbone.js , Ruby on Rails, Sinatra, Bootstrap, Skeleton CSS
-        Libraries: jQuery, Underscore.js
-        Testing: EDD/TDD/BDD using RSpec and minitest
-        Databases: SQLite, PostgreSQL
-        Other: Web API, AJAX, RESTful services, Git, Agile, MVC/MV* design patterns
-        <div class="chart"></div>
+    <div class="section skills">
+        <div class="wrapper">
+          <!-- Languages: Javascript, Ruby, HTML, CSS
+          Frameworks: Backbone.js , Ruby on Rails, Sinatra, Bootstrap, Skeleton CSS
+          Libraries: jQuery, Underscore.js
+          Testing: EDD/TDD/BDD using RSpec and minitest
+          Databases: SQLite, PostgreSQL
+          Other: Web API, AJAX, RESTful services, Git, Agile, MVC/MV* design patterns -->
+          <div class="col-skill">
+            <h3>LANGUAGES</h3>
+            <ul>
+              <li>Javascript</li>
+              <li>Ruby</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div><!--
+          --><div class="col-skill">
+            <h3>FRAMEWORKS</h3>
+            <ul>
+              <li>Backbone.js</li>
+              <li>Ruby on Rails</li>
+              <li>Sinatra</li>
+            </ul>
+          </div><!--
+          --><div class="col-skill">
+            <h3>LIBRARIES</h3>
+            <ul>
+              <li>jQuery</li>
+              <li>Underscore.js</li>
+            </ul>
+          </div><!--
+          --><div class="col-skill">
+            <h3>TESTING</h3>
+            <ul>
+              <li>RSpec</li>
+              <li>Minitest</li>
+            </ul>
+          </div><!--
+          --><div class="col-skill">
+            <h3>DATABASES</h3>
+            <ul>
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
+            </ul>
+          </div><!--
+          --><div class="col-skill">
+            <h3>OTHERS</h3>
+            <ul>
+              <li>Web API</li>
+              <li>AJAX</li>
+              <li>REST</li>
+              <li>Git</li>
+              <li>Agile</li>
+              <li>MVC/MV*</li>
+            </ul>
+          </div>
+        </div>
     </div>
-    <div class="section wrapper projects">
+    <div class="section projects">
+        <div class="wrapper">
           <article class="row project">
             <div id="slackImg" class="col col-6 imgWrapper img">
               <!-- <img src="images/slack.jpg" alt=""> -->
@@ -95,14 +148,12 @@
             --><div class="col col-4 summary">
               <h2>Slack Overflow</h2>
               <p>A forum for students and teachers at General Assembly where they can discuss course material, ask questions and post valuable resources.</p>
-              <div class="techIcons">
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-rails-plain-wordmark colored"></i>
-                <i class="devicon-bootstrap-plain-wordmark colored"></i>
-                <i class="devicon-postgresql-plain-wordmark colored"></i>
-                <i class="devicon-html5-plain-wordmark colored"></i>
-                <i class="devicon-css3-plain-wordmark colored"></i>
-              </div>
+                <i class="iconTech devicon-javascript-plain colored"></i>
+                <i class="iconTech devicon-rails-plain-wordmark colored"></i>
+                <i class="iconTech devicon-bootstrap-plain-wordmark colored"></i>
+                <i class="iconTech devicon-postgresql-plain-wordmark colored"></i>
+                <i class="iconTech devicon-html5-plain-wordmark colored"></i>
+                <i class="iconTech devicon-css3-plain-wordmark colored"></i>
               <p>When: 18 Dec 2015 </p>
               <div>
                 <a href="https://github.com/timiscoding/slack_overflow" target="_blank">Github</a>
@@ -110,75 +161,81 @@
               </div>
             </div>
           </article>
+        </div>
     </div>
-     <div class="section wrapper projects">
-          <article class="row project">
-            <div id="choresImg" class="col col-6 imgWrapper img">
-              <!-- <img id="choreImage" src="images/chores.jpg" alt=""> -->
-            </div><!--
-            --><div class="col col-4 summary">
-              <h2>Chore app</h2>
-              <p>A flatmates task manager web app with notifications, reviews and score tracking system.</p>
-              <span class="techIcons">
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-rails-plain-wordmark colored"></i>
-                <i class="devicon-backbonejs-plain-wordmark colored"></i>
-                <i class="devicon-jquery-plain-wordmark colored"></i>
-                <i class="devicon-postgresql-plain-wordmark colored"></i>
-                <i class="devicon-html5-plain-wordmark colored"></i>
-                <i class="devicon-css3-plain-wordmark colored"></i>
+     <div class="section projects">
+          <div class="wrapper">
+            <article class="row project">
+              <div id="choresImg" class="col col-6 imgWrapper img">
+                <!-- <img id="choreImage" src="images/chores.jpg" alt=""> -->
+              </div><!--
+              --><div class="col col-4 summary">
+                <h2>Chore app</h2>
+                <p>A flatmates task manager web app with notifications, reviews and score tracking system.</p>
+                  <i class="iconTech devicon-javascript-plain colored"></i>
+                  <i class="iconTech devicon-rails-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-backbonejs-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-jquery-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-postgresql-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-html5-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-css3-plain-wordmark colored"></i>
 
-              </span>
-              <p>When: 22 Jan 2016 </p>
-              <a href="https://github.com/timiscoding/project_2" target="_blank">Github</a>
-              <a href="https://calm-escarpment-12505.herokuapp.com/" target="_blank">Demo</a>
-            </div>
-          </article>
+                <p>When: 22 Jan 2016 </p>
+                <a href="https://github.com/timiscoding/project_2" target="_blank">Github</a>
+                <a href="https://calm-escarpment-12505.herokuapp.com/" target="_blank">Demo</a>
+              </div>
+            </article>
+          </div>
       </div>
 
-      <div class="section wrapper projects">
-           <article class="row project">
-            <div id="codePasteImg" class="col col-6 imgWrapper img">
-              <!-- <img src="images/code-paste.jpg" alt=""> -->
-            </div><!--
-            --><div class="col col-4 summary">
-              <h2>Code Paste</h2>
-              <p>Code paste is a code snippet tool that lets you anonymously paste code so you can quickly share it.</p>
-              <span class="techIcons">
-                <i class="devicon-javascript-plain colored"></i>
-                <i class="devicon-rails-plain-wordmark colored"></i>
-                <i class="devicon-jquery-plain-wordmark colored"></i>
-                <i class="devicon-postgresql-plain-wordmark colored"></i>
-                <i class="devicon-html5-plain-wordmark colored"></i>
-                <i class="devicon-css3-plain-wordmark colored"></i>
-              </span>
-              <p>When: 12 Feb 2016 </p>
-              <a href="https://github.com/timiscoding/code-paste" target="_blank">Github</a>
-              <a href="https://code-paste.herokuapp.com/" target="_blank">Demo</a>
-            </div>
-          </article>
+      <div class="section projects">
+           <div class="wrapper">
+             <article class="row project">
+              <div id="codePasteImg" class="col col-6 imgWrapper img">
+                <!-- <img src="images/code-paste.jpg" alt=""> -->
+              </div><!--
+              --><div class="col col-4 summary">
+                <h2>Code Paste</h2>
+                <p>Code paste is a code snippet tool that lets you anonymously paste code so you can quickly share it.</p>
+                  <i class="iconTech devicon-javascript-plain colored"></i>
+                  <i class="iconTech devicon-rails-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-jquery-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-postgresql-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-html5-plain-wordmark colored"></i>
+                  <i class="iconTech devicon-css3-plain-wordmark colored"></i>
+                <p>When: 12 Feb 2016 </p>
+                <a href="https://github.com/timiscoding/code-paste" target="_blank">Github</a>
+                <a href="https://code-paste.herokuapp.com/" target="_blank">Demo</a>
+              </div>
+                       </article>
+           </div>
     </div>
     <div id="about" class="section fp-auto-height">
         <h1>CONTACT</h1>
         <ul>
           <li>
-            <a href="mailto:timiscoding@gmail.com"><i class="fa fa-envelope-o"></i>timiscoding@gmail.com</a>
+            <a href="mailto:timiscoding@gmail.com"><i class="fa fa-envelope-square"></i>
+</i>timiscoding@gmail.com</a>
           </li>
           <li>
-            <i class="fa fa-phone-square"></i>0452 229 685</p>
+            <i class="fa fa-phone-square"></i>0452 229 685
           </li>
           <li>
-            <a href="https://twitter.com/timiscoding"><i class="fa fa-twitter-square"></i>twitter</a>
+            <a href="https://twitter.com/timiscoding"><i class="fa fa-twitter-square"></i>Twitter</a>
           </li>
           <li>
-            <a href="https://au.linkedin.com/in/timiscoding"><i class="fa fa-linkedin-square"></i>linkedin</a>
+            <a href="https://au.linkedin.com/in/timiscoding"><i class="fa fa-linkedin-square"></i>Linkedin</a>
           </li>
           <li>
             <a href="https://github.com/timiscoding" target="_blank"><i class="fa fa-github-square"></i>
         GitHub</a>
           </li>
-          <li><i class="fa fa-pencil-square"></i>
-<a href="http://timiscoding.github.io/blog/" target="_blank">Blog</a></li>
+          <li>
+            <a href="https://drive.google.com/file/d/0B6JIIawp8JvsR2xQSm53VElfNjA/view?usp=sharing" target="_blank"><i class="fa fa-file-text"></i></i>
+        Resume</a>
+          </li>
+          <li>
+<a href="http://timiscoding.github.io/blog/" target="_blank"><i class="fa fa-pencil-square"></i>Blog</a></li>
         </ul>
     </div>
   </div>
