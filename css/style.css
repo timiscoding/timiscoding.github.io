@@ -272,11 +272,14 @@ i.iconTech {
   nav li {
     display: none;
     text-align: center;
+    font-size: 2em;
+    margin: 1em auto;
   }
   nav li:first-child {
     display:block;
     color: grey;
     cursor: pointer;
+    margin: auto auto;
   }
   nav li:first-child:hover {
     color: black;
@@ -289,6 +292,9 @@ i.iconTech {
   }
   .project .img {
     height: 70vmin;
+  }
+  .project a {
+    display: block;
   }
   i.iconTech {
     font-size: 2.2em;
