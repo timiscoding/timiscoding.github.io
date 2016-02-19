@@ -1,14 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
-
-.chart div {
-  font: 10px;
-  background-color: steelblue;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: white;
-}
 
 body a {
   text-decoration: none;
@@ -21,16 +11,28 @@ body a:hover {
 
 body {
   margin: 0;
-  /*font-family: 'Droid Serif', serif;*/
   font-family: 'Lato', sans-serif;
   background: #ecf0f1;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 1em;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
 }
 
 nav {
   border-bottom: 2px solid black;
   background: #ecf0f1;
-  /*display: flex;*/
-  /*justify-content: space-between;*/
   font-size: 1.3em;
   font-weight: bold;
   letter-spacing: 1px;
@@ -49,7 +51,6 @@ nav ul {
   margin: 0;
   text-align: right;
 }
-
 
 nav li {
   display: inline;
@@ -77,13 +78,6 @@ nav a:hover {
   background-image: url('../images/desk.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-/*  background-image:
-  radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-  radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-  radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-  radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px),
-  linear-gradient(to bottom, black 60%, #ecf0f1);
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0;*/
 }
 
 .brief img {
@@ -96,23 +90,7 @@ nav a:hover {
   height: 20vmin;
 }
 
-/*.brief p {
-  margin: 0;
-  display: inline-block;
-  width: 75vw;
-  text-align: center;
-}*/
-
-.wrapper {
-  margin: 0 auto;
-  /*border: 1px solid grey;*/
-  /*background: white;*/
-  padding: 1em;
-}
-
 .row {
-  /*max-height: 50vmin;*/
-  /*margin: 1em;*/
   border: 1px solid lightgrey;
   overflow: hidden;
     background: #ecf0f1;
@@ -122,7 +100,6 @@ nav a:hover {
   max-height: 100%;
   display: inline-block;
   box-sizing: border-box;
-  /*background: green;*/
 }
 
 .col-6 {
@@ -135,10 +112,14 @@ nav a:hover {
   width: 40%;
 }
 
+.col-3 {
+  display: inline-block;
+  width: calc((100% - 2em) / 3);
+}
+
 .col-skill {
   display: inline-block;
   width: calc(95% / 3);
-  /*background: grey;*/
   max-height: 300px;
   padding: 0.5em;
   box-sizing: border-box;
@@ -163,11 +144,12 @@ nav a:hover {
 }
 
 .about {
-  /*min-height: 100vh;*/
-  /*background-image: linear-gradient(to bottom, #64b3f4, #71B280);*/
   background: #eee8d5;
 }
 
+.about .col {
+  vertical-align: top;
+}
 
 .about .time {
   box-sizing: border-box;
@@ -180,21 +162,104 @@ nav a:hover {
 
 .skills {
   background: #F1E6E0;
-  /*background-image: linear-gradient(to bottom, #71B280, #c2e59c);*/
 }
 
 .projects {
   background: #34495e;
-  /*background-image: linear-gradient(to bottom, white, black);*/
 }
 
-.col-3 {
-  display: inline-block;
-  width: calc((100% - 2em) / 3);
+.project .imgWrapper {
+  text-align: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.about .col {
-  vertical-align: top;
+#slackImg {
+  background-image: url('../images/SlackOverflow.jpg');
+}
+
+#choresImg {
+  background-image: url('../images/ChoresApp.jpg');
+}
+
+#codePasteImg {
+  background-image: url('../images/CodePaste.jpg');
+}
+
+.project .summary {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1em;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+
+i.iconTech {
+  line-height: 1.2em;
+}
+
+.devicon-javascript-plain {
+  background: black;
+}
+
+.project .links {
+  background: blue;
+  text-align: center;
+}
+
+.project a {
+  text-decoration: none;
+  background: #cddc39;
+  color: black;
+  padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.project a:hover {
+  background: #8bc34a;
+  color: white;
+}
+
+.project .summary h2 {
+  margin-top: 0;
+}
+
+#about {
+  background: black;
+  color: lightgrey;
+  padding: 0.5em 0;
+}
+
+#about a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+#about a:hover {
+  color: white;
+}
+
+#about i {
+  vertical-align: middle;
+}
+
+#about ul {
+  padding: 0;
+}
+
+#about li {
+  padding: 1em;
+  list-style-type: none;
+
+  font-size: 1.2em;
+}
+
+#about .fa {
+  font-size: 2em;
+  padding-right: 0.5em;
 }
 
 @media (max-width: 640px) {
@@ -204,15 +269,6 @@ nav a:hover {
   body {
     font-size: 12px;
   }
-/*  #logo {
-    display: block;
-    margin: auto 0;
-    padding: 0.5em;
-  }*/
-  /*#logo {
-    display: block;
-    text-align: center;
-  }*/
   nav li {
     display: none;
     text-align: center;
@@ -233,7 +289,6 @@ nav a:hover {
   }
   .project .img {
     height: 70vmin;
-    /*width: 100%;*/
   }
   i.iconTech {
     font-size: 2.2em;
@@ -247,7 +302,6 @@ nav a:hover {
   #about li, #about a {
       display: block;
   }
-
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {
@@ -260,7 +314,6 @@ nav a:hover {
   .col {
     width: 50%;
   }
-
   .about .col {
     width: calc((100% - 2em) / 3);;
   }
@@ -281,7 +334,6 @@ nav a:hover {
   }
   nav {
     display: inline-block;
-    /*float: right;*/
   }
   nav li {
     padding: 0 0.25em;
@@ -338,122 +390,4 @@ nav a:hover {
   .wrapper {
     max-width: 70vw;
   }
-}
-
-
-
-/*.project img {
-  max-height: 400px;
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  text-align: center;
-}*/
-
-i.iconTech {
-  line-height: 1.2em;
-}
-
-.project .imgWrapper {
-  text-align: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#slackImg {
-  background-image: url('../images/SlackOverflow.jpg');
-}
-
-#choresImg {
-  background-image: url('../images/ChoresApp.jpg');
-}
-
-#codePasteImg {
-  background-image: url('../images/CodePaste.jpg');
-}
-
-/*#choreImage {
-  width: auto;
-  height: 100%;
-}*/
-
-.project .summary {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 1em;
-  box-sizing: border-box;
-  font-size: 1.1em;
-  letter-spacing: 0.5px;
-}
-
-.project .links {
-  background: blue;
-  text-align: center;
-}
-
-.project a {
-  text-decoration: none;
-  background: #cddc39;
-  color: black;
-  padding: 0.5em;
-  border: 1px solid black;
-  border-radius: 3px;
-}
-
-.project a:hover {
-  background: #8bc34a;
-}
-
-.project .summary h2 {
-  margin-top: 0;
-}
-
-.devicon-javascript-plain {
-  background: black;
-}
-
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-size: 2em;
-  text-align: center;
-}
-
-h2 {
-  font-family: 'Lato', sans-serif;
-}
-
-#about {
-  background: black;
-  color: lightgrey;
-  padding: 0.5em 0;
-}
-
-#about a {
-  text-decoration: none;
-  color: lightgrey;
-}
-
-#about a:hover {
-  color: white;
-}
-
-#about i {
-  vertical-align: middle;
-}
-
-#about ul {
-  padding: 0;
-}
-
-#about li {
-  padding: 1em;
-  list-style-type: none;
-
-  font-size: 1.2em;
-}
-
-#about .fa {
-  font-size: 2em;
-  padding-right: 0.5em;
 }

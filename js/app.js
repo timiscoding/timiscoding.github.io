@@ -7,7 +7,6 @@ $(document).ready(function() {
       menu: '#menu'
     });
 
-
     $('#menu li:first-child').on('click', function(){
       console.log('clicked name');
       $('#menu li').toggleClass('showMenuItem');
@@ -22,17 +21,4 @@ $(document).ready(function() {
     $('#menu').on('mouseleave', function(){
       $('#menu li:not(:first)').removeClass('showMenuItem');
     });
-
-    // $('body').not('nav').on('click', function(){
-    //   $('#menu li:not(:first)').removeClass('showMenuItem');
-    // });
-    // console.log(s.node().getBBox());
-    // .each(function(d, i){
-    //   console.log(d, i, this);//, this.getBBox());
-    // });
-
-  // data.forEach(function(d){
-  //   // console.log('d', d);
-  //   $('.chart').append( $('div') );
-  // });
 });
