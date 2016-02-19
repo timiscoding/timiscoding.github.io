@@ -295,6 +295,8 @@ i.iconTech {
   }
   .project a {
     display: block;
+    padding: 1.5em;
+    margin-bottom: 1em;
   }
   i.iconTech {
     font-size: 2.2em;
