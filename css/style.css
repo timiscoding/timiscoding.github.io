@@ -290,7 +290,7 @@ i.iconTech {
     width: 100%;
   }
   .project .img {
-    height: 70vmin;
+    height: 50vmin;
   }
   .project a {
     display: block;
@@ -328,7 +328,7 @@ i.iconTech {
     font-size: 14px;
   }
   .project .img {
-    height: 300px;
+    height: 60vmin;
     display: table-cell;
   }
   i.iconTech {
@@ -367,7 +367,8 @@ i.iconTech {
     display: table;
   }
   .project .img {
-    height: 400px;
+    /*height: 400px;*/
+    height: 60vmin;
     display: table-cell;
   }
   i.iconTech {
@@ -395,6 +396,6 @@ i.iconTech {
       display: inline-block;
   }
   .wrapper {
-    max-width: 70vw;
+    max-width: 80vw;
   }
 }
