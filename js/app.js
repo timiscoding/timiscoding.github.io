@@ -8,6 +8,14 @@ $(document).ready(function() {
       menu: '#menu'
     });
 
+    $('nav').hide();
+    // show background image only after it's downloaded
+    $('<img/>').attr('src', 'images/desk.jpg').load(function() {
+      $(this).remove(); // prevent memory leaks as @benweet suggested
+      $('.brief').css('background-image', 'url(images/desk.jpg)').hide().fadeIn(1000);
+      $('nav').fadeIn(1000);
+    });
+
     $('#menu li:first-child').on('click', function(){
       console.log('clicked name');
       $('#menu li').toggleClass('showMenuItem');

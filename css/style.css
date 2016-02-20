@@ -12,7 +12,8 @@ body a:hover {
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: #ecf0f1;
+  /*background: #ecf0f1;*/
+  background: rgb(81,62,61);
 }
 
 .wrapper {
@@ -74,8 +75,6 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-image: url('../images/desk.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
