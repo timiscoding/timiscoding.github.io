@@ -8,12 +8,14 @@ $(document).ready(function() {
       menu: '#menu'
     });
 
-    $('nav').hide();
+    $('.section').hide();
     // show background image only after it's downloaded
     $('<img/>').attr('src', 'images/desk.jpg').load(function() {
       $(this).remove(); // prevent memory leaks as @benweet suggested
-      $('.brief').css('background-image', 'url(images/desk.jpg)').hide().fadeIn(1000);
-      $('nav').fadeIn(1000);
+      $('.brief').css('background-image', 'url(images/desk.jpg)').hide().fadeIn(1000, function() {
+        $('.section').show();
+
+      });
     });
 
     $('#menu li:first-child').on('click', function(){
