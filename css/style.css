@@ -186,6 +186,10 @@ nav a:hover {
   background-image: url('../images/CodePaste.jpg');
 }
 
+#tweetAquariumImg {
+  background-image: url('../images/TweetAquarium.jpg');
+}
+
 .project .summary {
   display: table-cell;
   vertical-align: middle;

@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
       responsiveHeight: 570,
       responsiveWidth: 640,
-      anchors: ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th'],
+      anchors: ['home', 'me', 'skill', 'project', '5th', '6th', '7th', 'contact'],
       menu: '#menu'
     });
 
