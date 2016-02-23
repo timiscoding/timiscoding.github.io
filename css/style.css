@@ -208,11 +208,11 @@ i.iconTech {
 }
 
 .project .links {
-  background: blue;
   text-align: center;
 }
 
 .project a {
+  display: inline-block;
   text-decoration: none;
   background: #cddc39;
   color: black;
@@ -229,6 +229,8 @@ i.iconTech {
 .project .summary h2 {
   margin-top: 0;
 }
+
+.project .summary
 
 #about {
   background: black;
@@ -376,7 +378,7 @@ i.iconTech {
     display: table-cell;
   }
   i.iconTech {
-    font-size: 3em;
+    font-size: 2.5em;
   }
   #logo {
     display: inline-block;
