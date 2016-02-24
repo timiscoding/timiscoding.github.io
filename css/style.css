@@ -230,8 +230,6 @@ i.iconTech {
   margin-top: 0;
 }
 
-.project .summary
-
 #about {
   background: black;
   color: lightgrey;
@@ -373,7 +371,6 @@ i.iconTech {
     display: table;
   }
   .project .img {
-    /*height: 400px;*/
     height: 60vmin;
     display: table-cell;
   }
