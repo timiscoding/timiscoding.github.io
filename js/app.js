@@ -71,7 +71,6 @@ $(document).ready(function() {
       normalScrollElements: 'iframe',
       afterRender: function() {
         // show background image only after it's downloaded
-        $('.brief').hide();
         $('<img/>').attr('src', 'images/desk.jpg').load(function() {
           $(this).remove(); // prevent memory leaks as @benweet suggested
           $('.brief').css('background-image', 'url(images/desk.jpg)').hide().fadeIn(1000, function() {
