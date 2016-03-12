@@ -116,30 +116,9 @@ nav a:hover {
   width: calc((100% - 2em) / 3);
 }
 
-.col-skill {
-  display: inline-block;
-  width: calc(95% / 3);
-  max-height: 300px;
-  padding: 0.5em;
-  box-sizing: border-box;
-  vertical-align: top;
-}
-
-.col-skill h3 {
-  text-align: center;
-  border-bottom: 1px solid black;
-}
-
-.col-skill ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-
-.col-skill li {
-  background: #73d216;
-  padding: 0.2em;
-  border: 1px solid black;
+.chart {
+  width: 100%;
+  height: 80vh;
 }
 
 .about {

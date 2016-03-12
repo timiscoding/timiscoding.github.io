@@ -1,20 +1,85 @@
-var data = ['Javascript', 'Ruby', 'HTML', 'CSS'];
+// Load the Visualization API and the corechart package.
+ google.charts.load('current', {'packages':['timeline']});
+
+
+
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
+  console.log('drawing chart')
+
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  var now = new Date();
+  data.addColumn({type: 'string', id: 'Category'});
+  data.addColumn({type: 'string', id: 'Item'});
+  data.addColumn({type: 'date', id: 'Start'});
+  data.addColumn({type: 'date', id: 'End'});
+  data.addRows([
+    ['Language', 'JavaScript', new Date(2015,6,1), now],
+    ['Language', 'Ruby', new Date(2015,10,9), now],
+    ['Language', 'HTML', new Date(2015,10,9), now],
+    ['Language', 'CSS', new Date(2015,10,9), now],
+    ['Language', 'Java', new Date(2012,6,1), new Date(2015,0,1)],
+    ['Language', 'C', new Date(2012,2,1), new Date(2012,6,1)],
+    ['Language', 'Perl', new Date(2012,6,1), new Date(2012,10,1)],
+    ['Language', 'Unix shell script', new Date(2012,6,1), new Date(2012,10,1)],
+    ['Framework', 'Ruby on Rails', new Date(2015,10,9), now],
+    ['Framework', 'Backbone.js', new Date(2015,10,9), now],
+    ['Framework', 'Sinatra', new Date(2015,10,9), now],
+    ['Framework', 'Spring', new Date(2014,7,0), new Date(2014,11,1)],
+    ['Framework', 'Struts', new Date(2014,3,1), new Date(2014,6,1)],
+    ['Library', 'jQuery', new Date(2015,10,9), now],
+    ['Library', 'Underscore.js', new Date(2015,10,9), now],
+    ['Testing', 'Minitest', new Date(2015,10,9), now],
+    ['Testing', 'RSpec', new Date(2015,10,9), now],
+    ['Database', 'PostgreSQL', new Date(2015,10,9), now],
+    ['Database', 'Sqlite', new Date(2015,10,9), now],
+    ['Database', 'MongoDB', new Date(2014,7,0), new Date(2014,11,1)],
+    ['Database', 'Neo4j', new Date(2014,7,0), new Date(2014,11,1)],
+    ['Other', 'REST', new Date(2015,10,9), now],
+    ['Other', 'AJAX', new Date(2015,10,9), now],
+    ['Other', 'Git', new Date(2015,10,9), now],
+    ['Other', 'Agile', new Date(2015,7,26), new Date(2015,9,11)],
+    ['Other', 'Algorithms', new Date(2013,6,1), new Date(2013,10,1)],
+    ['Other', 'OO Design', new Date(2014,2,1), new Date(2014,6,1)],
+    ['Other', 'Data structures', new Date(2012,6,1), new Date(2012,10,1)],
+    ['Other', 'Networks', new Date(2013,2,1), new Date(2013,6,1)]
+  ]);
+
+  // Set chart options
+  var options = {
+    'backgroundColor': 'transparent',
+    'timeline': { colorByRowLabel: true },
+    'forceIFrame': true,
+    'fontName': 'verdana'
+  };
+
+  // Instantiate and draw our chart, passing in some options.
+  var container = document.getElementById('skills_chart_container');
+  var chart = new google.visualization.Timeline(container);
+  chart.draw(data, options);
+}
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
       responsiveHeight: 570,
       responsiveWidth: 640,
       anchors: ['home', 'me', 'skill', 'project', '5th', '6th', '7th', 'contact'],
-      menu: '#menu'
-    });
-
-    $('.section').hide();
-    // show background image only after it's downloaded
-    $('<img/>').attr('src', 'images/desk.jpg').load(function() {
-      $(this).remove(); // prevent memory leaks as @benweet suggested
-      $('.brief').css('background-image', 'url(images/desk.jpg)').hide().fadeIn(1000, function() {
-        $('.section').show();
-
-      });
+      menu: '#menu',
+      normalScrollElements: 'iframe',
+      afterRender: function() {
+        // show background image only after it's downloaded
+        $('<img/>').attr('src', 'images/desk.jpg').load(function() {
+          $(this).remove(); // prevent memory leaks as @benweet suggested
+          $('.brief').css('background-image', 'url(images/desk.jpg)').hide().fadeIn(1000, function() {
+            $('.section').show();
+            // Set a callback to run when the Google Visualization API is loaded.
+            google.charts.setOnLoadCallback(drawChart);
+          });
+        });
+      }
     });
 
     // pan & zoom project images
@@ -62,4 +127,11 @@ $(document).ready(function() {
     $('#menu').on('mouseleave', function(){
       $('#menu li:not(:first)').removeClass('showMenuItem');
     });
+
+
+
+});
+
+$(window).resize(function(){
+  drawChart();
 });
