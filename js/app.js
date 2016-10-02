@@ -12,34 +12,42 @@ function drawChart() {
   // Create the data table.
   var data = new google.visualization.DataTable();
   var now = new Date();
+  var finishedGA = new Date(2016,2,12);
+  var startRecomazing = new Date(2016,3,18);
   data.addColumn({type: 'string', id: 'Category'});
   data.addColumn({type: 'string', id: 'Item'});
   data.addColumn({type: 'date', id: 'Start'});
   data.addColumn({type: 'date', id: 'End'});
   data.addRows([
-    ['Language', 'JavaScript', new Date(2015,6,1), now],
-    ['Language', 'Ruby', new Date(2015,10,9), now],
+    ['Language', 'JavaScript / ES6', new Date(2015,6,1), now],
+    ['Language', 'Ruby', new Date(2015,10,9), finishedGA],
     ['Language', 'HTML', new Date(2015,10,9), now],
-    ['Language', 'CSS', new Date(2015,10,9), now],
+    ['Language', 'CSS / SASS', new Date(2015,10,9), now],
     ['Language', 'Java', new Date(2012,6,1), new Date(2015,0,1)],
     ['Language', 'C', new Date(2012,2,1), new Date(2012,6,1)],
     ['Language', 'Perl', new Date(2012,6,1), new Date(2012,10,1)],
     ['Language', 'Unix shell script', new Date(2012,6,1), new Date(2012,10,1)],
-    ['Framework', 'Ruby on Rails', new Date(2015,10,9), now],
-    ['Framework', 'Backbone.js', new Date(2015,10,9), now],
-    ['Framework', 'Sinatra', new Date(2015,10,9), now],
+    ['Framework', 'React.js', startRecomazing, now],
+    ['Framework', 'Ruby on Rails', new Date(2015,10,9), finishedGA],
+    ['Framework', 'Backbone.js', new Date(2015,10,9), finishedGA],
+    ['Framework', 'Sinatra', new Date(2015,10,9), finishedGA],
     ['Framework', 'Spring', new Date(2014,7,0), new Date(2014,11,1)],
     ['Framework', 'Struts', new Date(2014,3,1), new Date(2014,6,1)],
-    ['Library', 'jQuery', new Date(2015,10,9), now],
-    ['Library', 'Underscore.js', new Date(2015,10,9), now],
-    ['Testing', 'Minitest', new Date(2015,10,9), now],
-    ['Testing', 'RSpec', new Date(2015,10,9), now],
-    ['Database', 'PostgreSQL', new Date(2015,10,9), now],
-    ['Database', 'Sqlite', new Date(2015,10,9), now],
+    ['Library', 'jQuery', new Date(2015,10,9), finishedGA],
+    ['Library', 'lodash.js', startRecomazing, now],
+    ['Library', 'Underscore.js', new Date(2015,10,9), finishedGA],
+    ['Testing', 'React-storybook', startRecomazing, now],
+    ['Testing', 'Mocha/Chai/Enzyme', startRecomazing, now],
+    ['Testing', 'Minitest', new Date(2015,10,9), finishedGA],
+    ['Testing', 'RSpec', new Date(2015,10,9), finishedGA],
+    ['Database', 'PostgreSQL', new Date(2015,10,9), finishedGA],
+    ['Database', 'Sqlite', new Date(2015,10,9), finishedGA],
     ['Database', 'MongoDB', new Date(2014,7,0), new Date(2014,11,1)],
     ['Database', 'Neo4j', new Date(2014,7,0), new Date(2014,11,1)],
-    ['Other', 'REST', new Date(2015,10,9), now],
-    ['Other', 'AJAX', new Date(2015,10,9), now],
+    ['Other', 'Webpack', startRecomazing, now],
+    ['Other', 'NPM', startRecomazing, now],
+    ['Other', 'REST', new Date(2015,10,9), finishedGA],
+    ['Other', 'AJAX', new Date(2015,10,9), finishedGA],
     ['Other', 'Git', new Date(2015,10,9), now],
     ['Other', 'Agile', new Date(2015,7,26), new Date(2015,9,11)],
     ['Other', 'Algorithms', new Date(2013,6,1), new Date(2013,10,1)],
