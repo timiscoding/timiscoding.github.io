@@ -153,6 +153,10 @@ nav a:hover {
   background-position: center;
 }
 
+#recomazingImg {
+  background-image: url('../images/Recomazing.jpg')
+}
+
 #slackImg {
   background-image: url('../images/SlackOverflow.jpg');
 }
@@ -190,7 +194,7 @@ i.iconTech {
   text-align: center;
 }
 
-.project a {
+.project__button {
   display: inline-block;
   text-decoration: none;
   background: #cddc39;
@@ -200,7 +204,7 @@ i.iconTech {
   border-radius: 3px;
 }
 
-.project a:hover {
+.project__button:hover {
   background: #8bc34a;
   color: white;
 }
