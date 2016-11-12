@@ -279,16 +279,11 @@ i.iconTech {
   .project .img {
     height: 50vmin;
   }
-  .project a {
+  #about a {
     display: block;
-    padding: 1.5em;
-    margin-bottom: 1em;
   }
   i.iconTech {
     font-size: 2.2em;
-  }
-  .project .summary {
-    text-align: center;
   }
   .wrapper {
     max-width: 95vw;

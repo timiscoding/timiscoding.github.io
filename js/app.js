@@ -70,17 +70,11 @@ function drawChart() {
   chart.draw(data, options);
 }
 
-function updateImage(filename, imageId) {
-  console.log('test', filename, imageId);
-  var imageContainer = document.getElementById(imageId);
-  imageContainer.style.backgroundImage = 'url(images/' + filename + ')';
-}
-
 $(document).ready(function() {
   $('#fullpage').fullpage({
     responsiveHeight: 570,
     responsiveWidth: 640,
-    anchors: ['home', 'me', 'skill', 'project', '5th', '6th', '7th', 'contact'],
+    anchors: ['home', 'me', 'skill', 'project', '5th', '6th', '7th', '8th', 'contact'],
     menu: '#menu',
     normalScrollElements: 'iframe',
     afterRender: function() {
@@ -144,17 +138,10 @@ $(document).ready(function() {
     $('#menu li:not(:first)').removeClass('showMenuItem');
   });
 
-  var autocompleteLink = document.getElementById("autocompleteLink");
-  autocompleteLink.onclick = updateImage.bind(null, "autocomplete.gif", "recomazingImg");
-
-  var filterLink = document.getElementById("filterLink");
-  filterLink.onclick = updateImage.bind(null, "filter.gif", "recomazingImg");
-
-  var mentionsLink = document.getElementById("mentionsLink");
-  mentionsLink.onclick = updateImage.bind(null, "mentions.gif", "recomazingImg");
-
-  var galleryLink = document.getElementById("galleryLink");
-  galleryLink.onclick = updateImage.bind(null, "gallery.gif", "recomazingImg");
+  lightbox.option({
+    alwaysShowNavOnTouchDevices: true,
+    disableScrolling: true,
+  });
 });
 
 $(window).resize(function(){
