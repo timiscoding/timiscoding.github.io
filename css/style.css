@@ -138,6 +138,19 @@ nav a:hover {
   text-align: center;
 }
 
+.about {
+  font-family: arial, sans-serif;
+  font-size: 0.875em;
+}
+
+.about a {
+  color: green;
+}
+
+.about a:hover {
+  color: lightseagreen;
+}
+
 .skills {
   background: #F1E6E0;
 }
@@ -151,6 +164,12 @@ nav a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.project .imgWrapper::before {
+  content: 'Move mouse inside image to pan';
+  background: white;
+  padding: 2px;
 }
 
 #recomazingImg {
@@ -180,6 +199,20 @@ nav a:hover {
   box-sizing: border-box;
   font-size: 1.1em;
   letter-spacing: 0.5px;
+  font-family: arial, sans-serif;
+  font-size: 0.875em;
+}
+
+.project .heading {
+  font-weight: 800;
+}
+
+.project a {
+  color: green;
+}
+
+.project a:hover {
+  color: lightseagreen;
 }
 
 i.iconTech {
@@ -194,7 +227,7 @@ i.iconTech {
   text-align: center;
 }
 
-.project__button {
+a.project__button {
   display: inline-block;
   text-decoration: none;
   background: #cddc39;
@@ -204,7 +237,7 @@ i.iconTech {
   border-radius: 3px;
 }
 
-.project__button:hover {
+a.project__button:hover {
   background: #8bc34a;
   color: white;
 }
@@ -252,9 +285,6 @@ i.iconTech {
   .brief {
     font-size: 1.2em;
   }
-  body {
-    font-size: 12px;
-  }
   nav li {
     display: none;
     text-align: center;
@@ -278,6 +308,10 @@ i.iconTech {
   }
   .project .img {
     height: 50vmin;
+  }
+  .project .imgWrapper::before {
+    content: '';
+    background: transparent;
   }
   #about a {
     display: block;
@@ -305,9 +339,6 @@ i.iconTech {
   }
   .about .col {
     width: calc((100% - 2em) / 3);;
-  }
-  body {
-    font-size: 14px;
   }
   .project .img {
     height: 60vmin;

@@ -115,6 +115,7 @@ $(document).ready(function() {
     if (Math.abs(newX) > imgWidth) { newX = -imgWidth; }
     if (Math.abs(newY) > imgHeight) { newY = -imgHeight; }
 
+    $(this).css('cursor', 'zoom-in');
     $(this).css('background-size', '200%');
     $(this).css('background-position', newX + 'px ' + newY + 'px');
   })
